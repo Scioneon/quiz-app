@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="C:\Users\Scion\OneDrive\Desktop\projects\quiz_project\style.css">
+    <title>Quiz app</title>
+</head>
+
+<body onload="NextQuestion(0)">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="C:\Users\Scion\OneDrive\Desktop\projects\quiz_project\index.js"></script>
+    <main>
+
+        <!--Modle  for when quiz ends-->
+
+        <div class="modal-container" id="score-modal">
+            <div class="modal-content-container">
+                <h1>Quiz completed!</h1>
+
+                <div class="grade-details">
+                    <p>Attemps: 1</p>
+                    <P>Wrong Answers: <span id="wrong-answers"></span></P>
+                    <P>Right Answers: <span id="right-answers"></span></P>
+                    <P>Grade: <span id="grade-percentage">%</span></P>
+                    <P><span id="remarks"></span></P>
+                </div>
+
+                <div class="modal-button-container">
+                    <button class="closeScoreModel">Retry?</button>
+                </div>
+            </div>
+        </div>
+        <!--End of quiz details-->
+
+
+        <!--Start button to start quiz-->
+        <div class="start-container">
+            <div id="btn-1" class="start-button">
+                <button type="button">Start</button>
+            </div>
+        </div>
+
+
+        <div class="quiz-Container" id="start-quiz">
+
+            <!--Quiz details-->
+            <div class="game-details-container">
+                <h1>Score: <span id="player-score"> /10</span></h1>
+                <h1>Question: <span id="question-number"> /10</span></h1>
+            </div>
+
+            <!--display question-->
+            <div class="game-question-container">
+                <h1 id="display-question"></h1>
+            </div>
+
+            <!--multiple choice answers-->
+            <div class="game-options-container">
+
+                <div class="modal-container" id="option-modal">
+
+                    <div class="modal-content-container">
+
+                        <div class="modal-button-container">
+                        </div>
+                    </div>
+
+                </div>
+                <!--End of choice answers section-->
+
+                <span>
+                    <input type="radio" id="option-one" name="option" class="radio" value="optionA" />
+                    <label for="option-one" class="option" id="option-one-label"></label>
+                </span>
+
+                <span>
+                    <input type="radio" id="option-two" name="option" class="radio" value="optionB" />
+                    <label for="option-two" class="option" id="option-two-label"></label>
+                </span>
+
+                <span>
+                    <input type="radio" id="option-three" name="option" class="radio" value="optionC" />
+                    <label for="option-three" class="option" id="option-three-label"></label>
+                </span>
+
+                <span>
+                    <input type="radio" id="option-four" name="option" class="radio" value="optionD" />
+                    <label for="option-four" class="option" id="option-four-label"></label>
+                </span>
+
+                <!--<form id="quiz-questions">
+                        <label><input type="radio" name="correct-answer">Answer 1</label>
+                        <label><input type="radio" name="wrong-answer">Answer 2</label>
+                        <label><input type="radio" name="wrong-answer">Answer 3</label>
+                        <label><input type="radio" name="wrong-answer">Answer 4</label>
+
+                        </form>-->
+
+            </div>
+
+
+            <!--add a class to the buttons and then set click listeners in javascript.-->
+
+            <div class="next-button-container">
+                <button>Next</button>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="C:\Users\Scion\OneDrive\Desktop\projects\quiz_project\questions.js"></script>
+
+</body>
+
+</html>
